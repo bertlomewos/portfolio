@@ -43,6 +43,8 @@ nav a:hover{
 nav h3:first-child{
     margin-right: auto;
     font-weight: bold;
+    color: #333;
+    font-size: 2rem;
 }
 .side{
     position: fixed;
@@ -111,7 +113,8 @@ nav h3:first-child{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
+    
 }
 
 .profile-container img {
@@ -124,12 +127,21 @@ nav h3:first-child{
     background: #f9f9f9;
    
 }
-
+.experience-head{
+    background: #e3eaf0;
+    text-align: center;
+}
 .experience-section {
     background: #e3eaf0;
     line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: wrap; 
     
 }
+
 .experience-section span{
     font-weight: bold;
 }
@@ -161,6 +173,7 @@ h1 {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
+    
     
    
 }
