@@ -104,9 +104,12 @@ nav h3:first-child{
     font-size: 16px;
 }
 .hero {
-    text-align: center;
-    margin: 50px auto;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
 .section {
     height: 100vh; /* Each section takes up the entire screen */
     display: flex;
@@ -116,13 +119,119 @@ nav h3:first-child{
     padding: 50px 20px;
     
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+.profile-container {
+    width: 40%;
+}
 
 .profile-container img {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 30%;
     object-fit: cover;
 }
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-content h1 {
+    margin-bottom: 0.5rem;
+}
+.header-content p{
+    text-align: center;
+}
+
+.btn-container{
+    display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.btn-container button{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    background-color: #333;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-container button a{
+
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-container,
+  .header-content,
+  .btn-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+   
+    .header-content p{
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        text-align: center;
+    }
+    .hero {
+        text-align: center;
+      }
+
+    .profile-container img {
+        max-width: 150px; /* Reduced image size */
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem; /* Slightly reduced font size */
+    }
+    .header-content p{
+        text-align: center;
+    }
+
+    .btn button {
+        font-size: 1rem; /* Slightly reduced font size */
+        padding: 0.75rem; /* Slightly reduced padding */
+    }
+}
+
+
 .about-section {
     background: #f9f9f9;
    
@@ -148,6 +257,10 @@ nav h3:first-child{
 .projects-section {
     background: #dceefb;
 }
+.project-head h2{
+    background: #dceefb;
+    text-align: center;
+}
 
 .contact-section {
     background: #e8f1f5;
@@ -158,9 +271,6 @@ h1 {
     color: #333;
 }
 
-.profile-container h1, .profile-container p {
-    margin-top: 10px;
-}
 
 .about-section, .experience-section, .projects-section, .contact-section {
     padding: 50px 20px;
@@ -191,10 +301,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .profile-container img {
-        width: 120px;
-        height: 120px;
-    }
+    
 
     .about-section, .experience-section, .projects-section, .contact-section {
         padding: 30px 30px;
@@ -205,6 +312,7 @@ h1 {
         gap: 10px;
     }
 }
+
 @media (max-width: 768px) {
     .top-nav {
         flex-direction: column;
