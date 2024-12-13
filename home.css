@@ -138,9 +138,9 @@ nav h3:first-child{
 }
 
 .profile-container img {
-    width: 100%;
+    width: 60%;
     height: auto;
-    border-radius: 30%;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -148,6 +148,7 @@ nav h3:first-child{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 60%;
 }
 
 .header-content h1 {
@@ -231,11 +232,77 @@ nav h3:first-child{
     }
 }
 
-
 .about-section {
-    background: #f9f9f9;
-   
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover;
+  }
+  
+  .profile-photo,
+  .about-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .about-content{
+   margin-top: 8%;
+  }
+ 
+  #about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #about p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  @media (min-width: 768px) {
+    .container1 {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  
+    .profile-photo {
+      flex: 0 0 40%;
+      margin-right: 20px;
+    }
+  
+    .about-content {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-photo {
+      max-width: 150px;
+    }
+  
+    #about h2 {
+      font-size: 1.5rem;
+    }
+  
+    #about p {
+      font-size: 1rem;
+    }
+  }
+  
+  
+
+
 .experience-head{
     background: #e3eaf0;
     text-align: center;
@@ -287,6 +354,86 @@ h1 {
     
    
 }
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+  
+  .project-photo {
+    flex-basis: 45%;
+    margin: 1rem 0;
+    position: relative;
+  }
+  
+  .project-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+  }
+  
+  .ptoject-para {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-section {
+      flex-direction: column;
+    }
+  
+    .project-photo {
+      flex-basis: 100%;
+    }
+  
+    .ptoject-para {
+        position: absolute;
+        text-align: center;
+        background-color: transparent;
+        padding: 7px;
+        font-size: 14px;
+        line-height: 1.4;
+        bottom: 20px; /* Keep it near the bottom of the image */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%; /* Keep the text within the image width */
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7); /* Maintain readability */
+       margin: 10% 3%;
+        border-radius: 5px;
+    }
+  }
+  @media (max-width: 480px){
+ 
+    .ptoject-para {
+        font-size: 14px;
+        position: absolute; /* Ensure it stays within the image */
+        bottom: 20px; /* Keep it near the bottom of the image */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%; /* Keep the text within the image width */
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7); /* Maintain readability */
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .contact-section img{
+        width: 10%;
+        height: 10%;
+    }
+
+  }
 
 .contact-links a {
     display: flex;
@@ -299,10 +446,17 @@ h1 {
 .contact-links svg {
     margin-right: 10px;
 }
+.contact-section img{
+    width: 2.5%;
+    height: 2.5%;
+}
 
 @media (max-width: 768px) {
     
-
+    .contact-section img{
+        width: 3%;
+        height: 3%;
+    }
     .about-section, .experience-section, .projects-section, .contact-section {
         padding: 30px 30px;
     }
